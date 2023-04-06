@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nexus
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexus
+  namespace: nexus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nexus
+  template:
+    metadata:
+      labels:
+        app: nexus
+    spec:
+      containers:
+      - name: nexus
+        image: sonatype/nexus3
+        ports:
+        - containerPort: 8081
+        volumeMounts:
+        - name: instances
+          mountPath: /nexus-data/instances
+        - name: javaprefs
+          mountPath: /nexus-data/javaprefs
+        - name: kar
+          mountPath: /nexus-data/kar
+        - name: lock
+          mountPath: /nexus-data/lock
+        - name: log
+          mountPath: /nexus-data/log
+        - name: port
+          mountPath: /nexus-data/port
+      volumes:
+      - name: instances
+        hostPath:
+          path: /vagrant/nexus/nexus-data/instances
+      - name: javaprefs
+        hostPath:
+          path: /vagrant/nexus/nexus-data/javaprefs
+      - name: kar
+        hostPath:
+          path: /vagrant/nexus/nexus-data/kar
+      - name: lock
+        hostPath:
+          path: /vagrant/nexus/nexus-data/lock
+      - name: log
+        hostPath:
+          path: /vagrant/nexus/nexus-data/log
+      - name: port
+        hostPath:
+          path: /vagrant/nexus/nexus-data/port

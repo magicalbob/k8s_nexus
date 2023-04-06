@@ -30,8 +30,6 @@ spec:
           mountPath: /nexus-data/javaprefs
         - name: kar
           mountPath: /nexus-data/kar
-        - name: lock
-          mountPath: /nexus-data/lock
         - name: log
           mountPath: /nexus-data/log
         - name: port
@@ -46,9 +44,6 @@ spec:
       - name: kar
         hostPath:
           path: /vagrant/nexus/nexus-data/kar
-      - name: lock
-        hostPath:
-          path: /vagrant/nexus/nexus-data/lock
       - name: log
         hostPath:
           path: /vagrant/nexus/nexus-data/log

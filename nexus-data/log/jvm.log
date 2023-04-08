@@ -457,4 +457,18 @@ java.awt.headless=true
 <dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
 <dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
 <dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
-<dependency_failed type='leaf_type' ctxk=
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='leaf_type' ctxk='javax/ws/rs/core/MediaType' witness='org/jboss/resteasy/util/WeightedMediaType' stamp='248.062'/>
+<dependency_failed type='unique_concrete_method' ctxk='javax/ws/rs/Produces' x='com/sun/proxy/$Proxy66 value ()[Ljava/lang/String;' witness='javax/ws/rs/Produces' stamp='248.137'/>
+<dependency_failed type='unique_concrete_method' ctxk='javax/ws/rs/Produces' x='com/sun/proxy/$Proxy66 value ()[Ljava/lang/String;' witness='javax/ws/rs/Produces' stamp='248.137'/>
+<writer thread='139819251492608'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/eclipse/jetty/io/ManagedSelector$Selectable' x='org/eclipse/jetty/io/ChannelEndPoint updateKey ()V' witness='org/eclipse/jetty/io/ManagedSelector$Selectable' stamp='8600.018'/>
+<dependency_failed type='unique_concrete_method' ctxk='org/eclipse/jetty/io/ManagedSelector$Selectable' x='org/eclipse/jetty/io/ChannelEndPoint onSelected ()Ljava/lang/Runnable;' witness='org/eclipse/jetty/io/ManagedSelector$Selectable' stamp='8600.018'/>
+<tty_done stamp='8600.934'/>
+</tty>
+<hotspot_log_done stamp='8600.934'/>
+</hotspot_log>

@@ -1755,3 +1755,98 @@ Started Sonatype Nexus OSS 3.51.0-01
 2023-04-08 11:31:13,669+0000 INFO  [qtp621911504-92]  *UNKNOWN org.ehcache.jsr107.Eh107CacheManager - Registering Ehcache MBean javax.cache:type=CacheStatistics,CacheManager=file./opt/sonatype/nexus/etc/fabric/ehcache.xml,Cache=shiro-activeSessionCache
 2023-04-08 11:31:21,674+0000 INFO  [qtp621911504-95]  admin org.sonatype.nexus.rapture.internal.security.SessionServlet - Created session for user: admin
 2023-04-08 11:31:32,288+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T11:32:52.288Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 11:33:12,301+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T11:35:12.300Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 11:35:32,319+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T11:38:52.318Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 11:39:12,344+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T11:44:32.344Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 11:40:00,027+0000 INFO  [quartz-10-thread-2]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 11:40:00,046+0000 INFO  [quartz-10-thread-2]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 11:44:52,358+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T11:53:32.357Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 11:50:00,012+0000 INFO  [quartz-10-thread-3]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 11:50:00,036+0000 INFO  [quartz-10-thread-3]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 11:53:52,369+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T12:07:52.369Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 12:00:00,012+0000 INFO  [quartz-10-thread-4]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:00:00,028+0000 INFO  [quartz-10-thread-4]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 12:08:12,393+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T12:30:52.393Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 12:10:00,010+0000 INFO  [quartz-10-thread-5]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:10:00,031+0000 INFO  [quartz-10-thread-5]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 12:20:00,009+0000 INFO  [quartz-10-thread-6]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:20:00,023+0000 INFO  [quartz-10-thread-6]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 12:30:00,010+0000 INFO  [quartz-10-thread-7]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:30:00,022+0000 INFO  [quartz-10-thread-7]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 12:30:17,237+0000 INFO  [SessionValidationThread-1]  *UNKNOWN org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Validating all active sessions...
+2023-04-08 12:30:17,246+0000 INFO  [SessionValidationThread-1]  *UNKNOWN org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Finished session validation.  [2] sessions were stopped.
+2023-04-08 12:31:12,426+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T13:07:52.425Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 12:40:00,015+0000 INFO  [quartz-10-thread-8]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:40:00,034+0000 INFO  [quartz-10-thread-8]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 12:50:00,009+0000 INFO  [quartz-10-thread-9]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 12:50:00,022+0000 INFO  [quartz-10-thread-9]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:00:00,012+0000 INFO  [quartz-10-thread-10]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:00:00,025+0000 INFO  [quartz-10-thread-10]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:08:12,443+0000 INFO  [Check Status https://api.nuget.org]  *SYSTEM org.sonatype.nexus.repository.httpclient.internal.HttpClientFacetImpl - Repository status for nuget.org-proxy continued as AUTO_BLOCKED_UNAVAILABLE until 2023-04-08T14:07:32.443Z - reason java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org (previous reason was java.net.UnknownHostException: api.nuget.org: Name or service not known for https://api.nuget.org)
+2023-04-08 13:10:00,008+0000 INFO  [quartz-10-thread-11]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:10:00,024+0000 INFO  [quartz-10-thread-11]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:20:00,008+0000 INFO  [quartz-10-thread-12]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:20:00,022+0000 INFO  [quartz-10-thread-12]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:30:00,015+0000 INFO  [quartz-10-thread-13]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:30:00,031+0000 INFO  [quartz-10-thread-13]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:30:17,236+0000 INFO  [SessionValidationThread-1]  *UNKNOWN org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Validating all active sessions...
+2023-04-08 13:30:17,237+0000 INFO  [SessionValidationThread-1]  *UNKNOWN org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Finished session validation.  No sessions were stopped.
+2023-04-08 13:40:00,010+0000 INFO  [quartz-10-thread-14]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:40:00,027+0000 INFO  [quartz-10-thread-14]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:50:00,007+0000 INFO  [quartz-10-thread-15]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-08 13:50:00,019+0000 INFO  [quartz-10-thread-15]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-08 13:50:30,333+0000 WARN  [SIGTERM handler]  *SYSTEM com.orientechnologies.orient.core.OSignalHandler - Received signal: SIGTERM
+2023-04-08 13:50:30,390+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.repository.httpbridge.internal.ViewServlet - Destroyed
+2023-04-08 13:50:30,397+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.siesta.SiestaServlet - Destroyed
+2023-04-08 13:50:30,406+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusContextListener - Uptime: 2 hours, 23 minutes, 13 seconds and 94 milliseconds (nexus-oss-edition/3.51.0.01)
+2023-04-08 13:50:30,408+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Shutting down
+2023-04-08 13:50:30,410+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop TASKS
+2023-04-08 13:50:30,411+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.quartz.internal.orient.OrientQuartzSchedulerSPI - Scheduler put into stand-by mode
+2023-04-08 13:50:30,415+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop CAPABILITIES
+2023-04-08 13:50:30,439+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SERVICES
+2023-04-08 13:50:30,549+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'SYSTEM_INFORMATION' removed from EhcacheManager.
+2023-04-08 13:50:30,553+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'SYSTEM_INFORMATION' successfully destroyed in EhcacheManager.
+2023-04-08 13:50:30,558+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SECURITY
+2023-04-08 13:50:30,561+0000 INFO  [FelixStartLevel]  *SYSTEM org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Disabled session validation scheduler.
+2023-04-08 13:50:30,561+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop EVENTS
+2023-04-08 13:50:30,564+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SCHEMAS
+2023-04-08 13:50:30,565+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop UPGRADE
+2023-04-08 13:50:30,567+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop RESTORE
+2023-04-08 13:50:30,567+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop STORAGE
+2023-04-08 13:50:30,573+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget-group#odata-query-cache' removed from EhcacheManager.
+2023-04-08 13:50:30,574+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'shiro-activeSessionCache' removed from EhcacheManager.
+2023-04-08 13:50:30,576+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthenticatingRealm.authenticationCache' removed from EhcacheManager.
+2023-04-08 13:50:30,576+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthorizingRealm.authorizationCache' removed from EhcacheManager.
+2023-04-08 13:50:30,579+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'maven-central#negative-cache' removed from EhcacheManager.
+2023-04-08 13:50:30,588+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#odata-query-cache' removed from EhcacheManager.
+2023-04-08 13:50:30,590+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#negative-cache' removed from EhcacheManager.
+2023-04-08 13:50:30,938+0000 WARN  [Files$PathHolder - ../sonatype-work/nexus3/tmp/top6508190194337744703/dir_renamed1/file1_renamed1]  *SYSTEM org.terracotta.utilities.io.FilesSupport$PathHolder - Error attempting to lock "../sonatype-work/nexus3/tmp/top6508190194337744703/dir_renamed1/file1_renamed1"
+java.io.FileNotFoundException: ../sonatype-work/nexus3/tmp/top6508190194337744703/dir_renamed1/file1_renamed1 (No such file or directory)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.terracotta.utilities.io.FilesSupport$PathHolder.lockFile(FilesSupport.java:371)
+	at org.terracotta.utilities.io.FilesSupport$PathHolder.lambda$new$0(FilesSupport.java:332)
+	at java.lang.Thread.run(Thread.java:750)
+2023-04-08 13:50:30,953+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.cache.internal.ehcache.EhCacheManagerProvider - Cache-manager closed
+2023-04-08 13:50:30,955+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] stopping ...
+2023-04-08 13:50:30,988+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] stopped
+2023-04-08 13:50:30,989+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] closing ...
+2023-04-08 13:50:30,993+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] closed
+2023-04-08 13:50:30,999+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping 3 pools
+2023-04-08 13:50:30,999+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: security
+2023-04-08 13:50:31,000+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: component
+2023-04-08 13:50:31,000+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: config
+2023-04-08 13:50:31,001+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server is shutting down...
+2023-04-08 13:50:31,001+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - Shutting down protocols
+2023-04-08 13:50:31,002+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - Shutting down plugins:
+2023-04-08 13:50:31,002+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - - jmx
+2023-04-08 13:50:31,003+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server shutdown complete
+2023-04-08 13:50:31,003+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - Orient Engine is shutting down...
+2023-04-08 13:50:31,004+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: component...
+2023-04-08 13:50:32,521+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: security...
+2023-04-08 13:50:33,334+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: config...
+2023-04-08 13:50:35,497+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: OSystem...
+2023-04-08 13:50:36,334+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - OrientDB Engine shutdown complete
+2023-04-08 13:50:36,335+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl - Shutdown
+2023-04-08 13:50:36,336+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop KERNEL

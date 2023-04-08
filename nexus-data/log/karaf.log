@@ -34,3 +34,15 @@ Apr 08, 2023 9:43:07 AM org.apache.karaf.main.Main launch
 INFO: All initial bundles installed and set to start
 Apr 08, 2023 9:43:08 AM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
 INFO: Lock acquired. Setting startlevel to 100
+Apr 08, 2023 11:22:00 AM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Apr 08, 2023 11:22:00 AM org.apache.karaf.main.Main launch
+INFO: All initial bundles installed and set to start
+Apr 08, 2023 11:22:01 AM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+INFO: Lock acquired. Setting startlevel to 100
+Apr 08, 2023 11:27:18 AM org.apache.karaf.main.Main launch
+INFO: Installing and starting initial bundles
+Apr 08, 2023 11:27:18 AM org.apache.karaf.main.Main launch
+INFO: All initial bundles installed and set to start
+Apr 08, 2023 11:27:19 AM org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+INFO: Lock acquired. Setting startlevel to 100

@@ -57,7 +57,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.51.0))
 103; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-256; version=3.51.0
+260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search)(version>=3.51.0))
 256; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest.api.model)(version>=3.51.0))

@@ -103,7 +103,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.types)
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.51.0))
 103; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-256; version=3.51.0
+260; version=3.51.0
 osgi.wiring.package; (osgi.wiring.package=org.eclipse.sisu.inject)
 102; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=com.codahale.metrics)(version>=4.1.0))

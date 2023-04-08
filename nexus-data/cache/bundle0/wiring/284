@@ -223,7 +223,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.clm.dto.model.rhc)(version>=1.49.0))
 285; version=1.49.5.01
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-256; version=3.51.0
+260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.clm.dto.model.repository.migration)(version>=1.49.0))
 285; version=1.49.5.01
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.client)

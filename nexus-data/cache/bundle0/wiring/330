@@ -79,7 +79,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(version>=3.51.0))
 103; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-256; version=3.51.0
+260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search)(version>=3.51.0))
 256; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.text)(version>=3.51.0))
@@ -113,7 +113,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view.m
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpclient)(version>=3.51.0))
 260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.inject)(version>=1.0.0))
 11; version=1.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.upgrade)(version>=3.51.0))

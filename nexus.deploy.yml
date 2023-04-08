@@ -18,35 +18,18 @@ spec:
       labels:
         app: nexus
     spec:
+      securityContext:
+        runAsUser: 1000
+        fsGroup: 1000
       containers:
       - name: nexus
         image: sonatype/nexus3
         ports:
         - containerPort: 8081
         volumeMounts:
-        - name: instances
-          mountPath: /nexus-data/instances
-        - name: javaprefs
-          mountPath: /nexus-data/javaprefs
-        - name: kar
-          mountPath: /nexus-data/kar
-        - name: log
-          mountPath: /nexus-data/log
-        - name: port
-          mountPath: /nexus-data/port
+        - name: nexus-data
+          mountPath: /nexus-data
       volumes:
-      - name: instances
+      - name: nexus-data
         hostPath:
-          path: /vagrant/nexus/nexus-data/instances
-      - name: javaprefs
-        hostPath:
-          path: /vagrant/nexus/nexus-data/javaprefs
-      - name: kar
-        hostPath:
-          path: /vagrant/nexus/nexus-data/kar
-      - name: log
-        hostPath:
-          path: /vagrant/nexus/nexus-data/log
-      - name: port
-        hostPath:
-          path: /vagrant/nexus/nexus-data/port
+          path: /vagrant/nexus/nexus-data

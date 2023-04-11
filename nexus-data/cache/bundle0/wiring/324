@@ -21,7 +21,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.export
 osgi.wiring.package; (&(osgi.wiring.package=com.google.common.hash)(version>=30.1.0))
 13; version=30.1.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.importtask)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.validation)(version>=3.51.0))
 145; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.mime)(version>=3.51.0))
@@ -109,7 +109,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.shiro.util)(version>=1.10.0))
 139; version=1.10.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http)
 78; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.event.asset)(version>=3.51.0))
@@ -137,7 +137,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.base)(version>=30.
 osgi.wiring.package; (osgi.wiring.package=javax.net.ssl)
 0; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.51.0))
-258; version=3.51.0
+256; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.search)(version>=3.51.0))
 272; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.index)(version>=2.2.0))
@@ -219,7 +219,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.query)(version>=2.2.0))
 226; version=2.2.37
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest.sql)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.51.0))

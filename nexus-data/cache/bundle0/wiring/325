@@ -145,7 +145,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.formfields)(versi
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.scheduling.events)(version>=3.51.0))
 165; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.selector)(version>=3.51.0))
 269; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.httpclient)(version>=3.51.0))

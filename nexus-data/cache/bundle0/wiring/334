@@ -81,7 +81,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpcl
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.entity)(version>=3.51.0))
 103; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.collect)(version>=3.51.0))
@@ -165,7 +165,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.query)(version>=2.2.0))
 226; version=2.2.37
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest.sql)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.51.0))

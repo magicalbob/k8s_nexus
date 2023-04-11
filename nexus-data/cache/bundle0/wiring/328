@@ -17,7 +17,7 @@ osgi.wiring.package; (&(osgi.wiring.package=com.google.common.base)(version>=30.
 osgi.wiring.package; (&(osgi.wiring.package=org.apache.commons.lang3)(version>=3.12.0))
 156; version=3.12.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.51.0))
-258; version=3.51.0
+256; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.search)(version>=3.51.0))
 272; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.browse.store)(version>=3.51.0))
@@ -103,7 +103,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.app)(versi
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
 260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.search)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest.api.model)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.hash)(version>=3.51.0))
@@ -147,7 +147,7 @@ osgi.wiring.package; (&(osgi.wiring.package=javax.inject)(version>=1.0.0))
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.rest)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=javax.mail)(version>=1.6.0))
 162; version=1.6.0
 osgi.wiring.package; (&(osgi.wiring.package=io.swagger.annotations)(version>=1.6.0))

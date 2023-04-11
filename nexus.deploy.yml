@@ -33,3 +33,5 @@ spec:
       - name: nexus-data
         hostPath:
           path: /vagrant/nexus/nexus-data
+      imagePullSecrets:
+        - name: my-docker-credentials

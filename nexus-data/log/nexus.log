@@ -171,3 +171,60 @@
 2023-04-12 11:40:00,006+0000 INFO  [quartz-10-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
 2023-04-12 11:40:00,017+0000 INFO  [quartz-10-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
 2023-04-12 11:46:29,838+0000 INFO  [qtp177351151-576]  admin org.sonatype.nexus.rapture.internal.security.SessionServlet - Created session for user: admin
+2023-04-12 11:50:00,006+0000 INFO  [quartz-10-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2023-04-12 11:50:00,017+0000 INFO  [quartz-10-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2023-04-12 11:54:38,958+0000 WARN  [SIGTERM handler]  *SYSTEM com.orientechnologies.orient.core.OSignalHandler - Received signal: SIGTERM
+2023-04-12 11:54:38,999+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.repository.httpbridge.internal.ViewServlet - Destroyed
+2023-04-12 11:54:39,000+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.siesta.SiestaServlet - Destroyed
+2023-04-12 11:54:39,015+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusContextListener - Uptime: 21 hours, 42 minutes, 16 seconds and 529 milliseconds (nexus-oss-edition/3.51.0.01)
+2023-04-12 11:54:39,016+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Shutting down
+2023-04-12 11:54:39,020+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop TASKS
+2023-04-12 11:54:39,021+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.quartz.internal.orient.OrientQuartzSchedulerSPI - Scheduler put into stand-by mode
+2023-04-12 11:54:39,023+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop CAPABILITIES
+2023-04-12 11:54:39,038+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SERVICES
+2023-04-12 11:54:39,085+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'SYSTEM_INFORMATION' removed from EhcacheManager.
+2023-04-12 11:54:39,088+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'SYSTEM_INFORMATION' successfully destroyed in EhcacheManager.
+2023-04-12 11:54:39,091+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SECURITY
+2023-04-12 11:54:39,093+0000 INFO  [FelixStartLevel]  *SYSTEM org.apache.shiro.session.mgt.AbstractValidatingSessionManager - Disabled session validation scheduler.
+2023-04-12 11:54:39,094+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop EVENTS
+2023-04-12 11:54:39,094+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SCHEMAS
+2023-04-12 11:54:39,096+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop UPGRADE
+2023-04-12 11:54:39,097+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop RESTORE
+2023-04-12 11:54:39,097+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop STORAGE
+2023-04-12 11:54:39,101+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget-group#odata-query-cache' removed from EhcacheManager.
+2023-04-12 11:54:39,108+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'shiro-activeSessionCache' removed from EhcacheManager.
+2023-04-12 11:54:39,109+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthenticatingRealm.authenticationCache' removed from EhcacheManager.
+2023-04-12 11:54:39,110+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthorizingRealm.authorizationCache' removed from EhcacheManager.
+2023-04-12 11:54:39,111+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'maven-central#negative-cache' removed from EhcacheManager.
+2023-04-12 11:54:39,112+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#odata-query-cache' removed from EhcacheManager.
+2023-04-12 11:54:39,116+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#negative-cache' removed from EhcacheManager.
+2023-04-12 11:54:39,202+0000 WARN  [Files$PathHolder - ../sonatype-work/nexus3/tmp/top6106946379274478447/dir_renamed1/file1_renamed1]  *SYSTEM org.terracotta.utilities.io.FilesSupport$PathHolder - Error attempting to lock "../sonatype-work/nexus3/tmp/top6106946379274478447/dir_renamed1/file1_renamed1"
+java.io.FileNotFoundException: ../sonatype-work/nexus3/tmp/top6106946379274478447/dir_renamed1/file1_renamed1 (No such file or directory)
+	at java.io.RandomAccessFile.open0(Native Method)
+	at java.io.RandomAccessFile.open(RandomAccessFile.java:316)
+	at java.io.RandomAccessFile.<init>(RandomAccessFile.java:243)
+	at org.terracotta.utilities.io.FilesSupport$PathHolder.lockFile(FilesSupport.java:371)
+	at org.terracotta.utilities.io.FilesSupport$PathHolder.lambda$new$0(FilesSupport.java:332)
+	at java.lang.Thread.run(Thread.java:750)
+2023-04-12 11:54:39,215+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.cache.internal.ehcache.EhCacheManagerProvider - Cache-manager closed
+2023-04-12 11:54:39,217+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] stopping ...
+2023-04-12 11:54:39,252+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] stopped
+2023-04-12 11:54:39,252+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] closing ...
+2023-04-12 11:54:39,258+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [0D6048CF-98A9E859-28BFA4F0-2BB21E3B-9BAB61EC] closed
+2023-04-12 11:54:39,262+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping 3 pools
+2023-04-12 11:54:39,262+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: security
+2023-04-12 11:54:39,263+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: component
+2023-04-12 11:54:39,263+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: config
+2023-04-12 11:54:39,264+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server is shutting down...
+2023-04-12 11:54:39,264+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - Shutting down protocols
+2023-04-12 11:54:39,265+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - Shutting down plugins:
+2023-04-12 11:54:39,265+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - - jmx
+2023-04-12 11:54:39,266+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server shutdown complete
+2023-04-12 11:54:39,267+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - Orient Engine is shutting down...
+2023-04-12 11:54:39,267+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: component...
+2023-04-12 11:54:40,660+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: security...
+2023-04-12 11:54:41,772+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: config...
+2023-04-12 11:54:44,363+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: OSystem...
+2023-04-12 11:54:45,000+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - OrientDB Engine shutdown complete
+2023-04-12 11:54:45,014+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl - Shutdown
+2023-04-12 11:54:45,015+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop KERNEL

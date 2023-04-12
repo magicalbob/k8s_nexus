@@ -8,6 +8,9 @@ fi
 # create service
 kubectl apply -f nexus.svc.yml
 
+# create vmoptions
+kubectl apply -f nexus.vmoptions.yml
+
 # create deployment
 kubectl apply -f nexus.deploy.yml
 

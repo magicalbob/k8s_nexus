@@ -39,6 +39,9 @@ spec:
       volumes:
       - name: nexus-data
         hostPath:
-          path: /vagrant/nexus/nexus-data
+          path: /Users/ian/Documents/src/k8s_nexus/nexus-data
+      - name: nexus-vmoptions
+        configMap:
+          name: nexus-vmoptions
       imagePullSecrets:
         - name: my-docker-credentials

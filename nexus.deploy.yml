@@ -19,13 +19,20 @@ spec:
         app: nexus
     spec:
       securityContext:
-        runAsUser: 1000
-        fsGroup: 1000
+        runAsUser: 0
+        fsGroup: 0
       containers:
       - name: nexus
         image: sonatype/nexus3
         ports:
         - containerPort: 8081
+        resources:
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+          limits:
+            memory: "6Gi"
+            cpu: "4"
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data

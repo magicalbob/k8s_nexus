@@ -23,16 +23,16 @@ spec:
         fsGroup: 0
       containers:
       - name: nexus
-        image: sonatype/nexus3
+        image: sonatype/nexus3:3.51.0
         ports:
         - containerPort: 8081
         resources:
           requests:
             memory: "4Gi"
-            cpu: "2"
+            cpu: "4"
           limits:
             memory: "6Gi"
-            cpu: "4"
+            cpu: "6"
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data

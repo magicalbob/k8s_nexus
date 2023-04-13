@@ -8,6 +8,9 @@ then
   fi
 fi
 
+# add metrics
+kubectl apply -f https://dev.ellisbs.co.uk/files/components.yaml
+
 # install local storage
 kubectl apply -f  local-storage-class.yml
 
@@ -29,10 +32,10 @@ export NODE_NAME=$(kubectl get nodes |grep control-plan|cut -d\  -f1)
 if [ $(uname) == "Darwin" ]
 then
   envsubst < nexus.deploy.pv.kind.yml.template > nexus.deploy.pv.kind.yml
-  kubectl apply -f nexus.pv.kind.yml
+  kubectl apply -f nexus.deploy.pv.kind.yml
 else
   envsubst < nexus.deploy.pv.linux.yml.template > nexus.deploy.pv.linux.yml
-  kubectl apply -f nexus.pv.linux.yml
+  kubectl apply -f nexus.deploy.pv.linux.yml
 fi
 
 # create common deployment

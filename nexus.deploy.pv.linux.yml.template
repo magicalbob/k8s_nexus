@@ -19,17 +19,4 @@ spec:
           operator: In
           values:
           - $NODE_NAME
----
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: nexus-data
-  namespace: nexus
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
-  storageClassName: local-storage
 

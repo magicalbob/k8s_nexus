@@ -40,8 +40,19 @@ spec:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus-data
-      - name: nexus-vmoptions
-        configMap:
-          name: nexus-vmoptions
       imagePullSecrets:
         - name: my-docker-credentials
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nexus-data
+  namespace: nexus
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: local-storage
+

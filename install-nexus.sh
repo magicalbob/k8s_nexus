@@ -11,8 +11,12 @@ kubectl apply -f nexus.svc.yml
 # create vmoptions
 kubectl apply -f nexus.vmoptions.yml
 
+# sort out persistent volume
+NODE_NAME=$(kubectl get nodes |grep control-plan|cut -d\  -f1)
+envsubst < nexus.persistence.yml.template > nexus.persistence.yml
+kubectl apply -f nexus.persistence.yml
+
 # create deployment
-envsubst < nexus.deploy.yml.template > nexus.deploy.yml
 kubectl apply -f nexus.deploy.yml
 
 # check status

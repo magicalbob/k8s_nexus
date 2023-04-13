@@ -1,4 +1,4 @@
 nexus-data/log/*
 nexus-data/log/request.log
 nexus-data/lock
-nexus.persistence.yml
+nexus.deploy.pv.*.yml

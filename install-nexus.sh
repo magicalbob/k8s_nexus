@@ -1,11 +1,15 @@
 # Make sure cluster exists if Mac
 if [ $(uname) == "Darwin" ]
-  kind  get clusters | grep "No kind clusters found"
+then
+  kind  get clusters 2>&1 | grep "No kind clusters found"
   if [ $? -eq 0 ]
   then
       kind create cluster --config kind-config.yaml
   fi
 fi
+
+# install local storage
+kubectl apply -f  local-storage-class.yml
 
 # create renovate namespace, if it doesn't exist
 kubectl get ns nexus 2> /dev/null

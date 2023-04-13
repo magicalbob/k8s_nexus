@@ -5,9 +5,9 @@ metadata:
   namespace: nexus
 data:
   nexus.vmoptions: |
-    -Xms2g
-    -Xmx2g
-    -XX:MaxDirectMemorySize=3g
+    -Xms6g
+    -Xmx6g
+    -XX:MaxDirectMemorySize=8g
     -XX:+UnlockExperimentalVMOptions
     -XX:+UseCGroupMemoryLimitForHeap
     -Djava.util.prefs.userRoot=/nexus-data/javaprefs

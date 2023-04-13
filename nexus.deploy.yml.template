@@ -39,7 +39,7 @@ spec:
       volumes:
       - name: nexus-data
         hostPath:
-          path: /Users/ian/Documents/src/k8s_nexus/nexus-data
+          path: PWD/nexus-data
       - name: nexus-vmoptions
         configMap:
           name: nexus-vmoptions

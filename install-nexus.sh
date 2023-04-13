@@ -12,6 +12,8 @@ kubectl apply -f nexus.svc.yml
 kubectl apply -f nexus.vmoptions.yml
 
 # create deployment
+cp nexus.deploy.yml.template nexus.deploy.yml
+sed -i "s/PWD/$PWD/" nexus.deploy.yml
 kubectl apply -f nexus.deploy.yml
 
 # check status

@@ -39,7 +39,7 @@ spec:
       volumes:
       - name: nexus-data
         hostPath:
-          path: PWD/nexus-data
+          path: $PWD/nexus-data
       - name: nexus-vmoptions
         configMap:
           name: nexus-vmoptions

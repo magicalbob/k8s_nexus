@@ -2,3 +2,4 @@ nexus-data/log/*
 nexus-data/log/request.log
 nexus-data/lock
 nexus.deploy.pv.*.yml
+kind-config.yaml

@@ -23,6 +23,7 @@ then
   kind  get clusters 2>&1 | grep "No kind clusters found"
   if [ $? -eq 0 ]
   then
+      envsubst < kind-config.yaml.template > kind-config.yaml
       kind create cluster --config kind-config.yaml
   fi
 fi

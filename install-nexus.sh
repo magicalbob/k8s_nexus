@@ -1,5 +1,24 @@
+USAGE="$0 [kind]"
+
+KIND=0
+
+if [ $# -gt 1 ]
+then
+  echo $USAGE
+  exit 1
+elif [ $# -eq 1 ]
+then
+  if [ $1 == "kind" ]
+  then
+    KIND=1
+  else
+    echo $USAGE
+    exit 1
+  fi
+fi
+
 # Make sure cluster exists if Mac
-if [ $(uname) == "Darwin" ]
+if [ $KIND -eq 1 ]
 then
   kind  get clusters 2>&1 | grep "No kind clusters found"
   if [ $? -eq 0 ]
@@ -29,7 +48,7 @@ kubectl apply -f nexus.vmoptions.yml
 
 # sort out persistent volume
 export NODE_NAME=$(kubectl get nodes |grep control-plan|cut -d\  -f1)
-if [ $(uname) == "Darwin" ]
+if [ $KIND -eq 1 ]
 then
   envsubst < nexus.deploy.pv.kind.yml.template > nexus.deploy.pv.kind.yml
   kubectl apply -f nexus.deploy.pv.kind.yml

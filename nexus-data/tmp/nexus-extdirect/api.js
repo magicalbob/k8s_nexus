@@ -140,13 +140,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'defaultWorkDirectory',
-        len: 0,
+        name: 'readGroupable',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readGroupable',
-        len: 1,
+        name: 'defaultWorkDirectory',
+        len: 0,
         formHandler: false
       },
       {
@@ -758,13 +758,13 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Repository: [
       {
-        name: 'getBrowseableFormats',
-        len: 0,
+        name: 'readReferencesAddingEntriesForAllFormats',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readReferencesAddingEntriesForAllFormats',
-        len: 1,
+        name: 'getBrowseableFormats',
+        len: 0,
         formHandler: false
       },
       {

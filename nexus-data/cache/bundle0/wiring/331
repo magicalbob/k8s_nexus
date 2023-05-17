@@ -19,7 +19,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.export
 osgi.wiring.package; (&(osgi.wiring.package=com.google.common.hash)(version>=30.1.0))
 13; version=30.1.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.importtask)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.validation)(version>=3.51.0))
 145; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.mime)(version>=3.51.0))
@@ -79,7 +79,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.httpcl
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.cache)(version>=3.51.0))
 258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-256; version=3.51.0
+258; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.utils)(version>=3.51.0))
 272; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.common.entity)(version>=3.51.0))
@@ -101,7 +101,7 @@ osgi.wiring.package; (&(osgi.wiring.package=javax.ws.rs)(version>=2.0.0))
 osgi.wiring.package; (&(osgi.wiring.package=com.google.common.base)(version>=30.1.0))
 13; version=30.1.1
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.upload)(version>=3.51.0))
-258; version=3.51.0
+256; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.content.search)(version>=3.51.0))
 272; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.index)(version>=2.2.0))
@@ -171,7 +171,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=org.yaml.snakeyaml.nodes)(version>=1.33.0))
 213; version=1.33.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-256; version=3.51.0
+260; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.snakeyaml.engine.v2.api)(version>=2.1.0))
 332; version=2.1.0
 osgi.wiring.package; (&(osgi.wiring.package=com.orientechnologies.orient.core.query)(version>=2.2.0))

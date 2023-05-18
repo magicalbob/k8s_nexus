@@ -10,7 +10,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: $PWD/nexus-data
+    path: /mnt/nexus-data
   nodeAffinity:
     required:
       nodeSelectorTerms:

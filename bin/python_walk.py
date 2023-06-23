@@ -18,9 +18,10 @@ for file_type in file_types:
         print('{}/{}'.format(file_type,repo_type))
         for file in os.listdir('repo_config/{}/{}'.format(file_type,repo_type)):
             with open('repo_config/{}/{}/{}'.format(file_type,repo_type,file)) as file:
-                lines = [line.rstrip() for line in file]
-            print(json.dumps(lines))
-            response = requests.post(url, headers=headers, data=json.dumps(lines), auth=('admin', 'LetMeIn'))
+                data = json.load(file)
+            print(json.dumps(data))
+            response = requests.post(url, headers=headers, data=json.dumps(data), auth=('admin', 'LetMeIn'))
             # print the response
             print(response.status_code)
             print(response.text)
+

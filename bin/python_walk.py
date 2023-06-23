@@ -3,6 +3,10 @@ import os
 import requests
 import json
 
+# get the username and password from environment variables
+username = os.environ.get('NEXUS_USERNAME')
+password = os.environ.get('NEXUS_PASSWORD')
+
 # define url and headers
 url = 'https://nexus.ellisbs.co.uk/service/rest/v1/repositories/maven/hosted'
 headers = {
@@ -20,7 +24,7 @@ for file_type in file_types:
             with open('repo_config/{}/{}/{}'.format(file_type,repo_type,file)) as file:
                 data = json.load(file)
             print(json.dumps(data))
-            response = requests.post(url, headers=headers, data=json.dumps(data), auth=('admin', 'LetMeIn'))
+            response = requests.post(url, headers=headers, data=json.dumps(data), auth=(username, password))
             # print the response
             print(response.status_code)
             print(response.text)

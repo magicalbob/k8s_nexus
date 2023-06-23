@@ -8,7 +8,6 @@ username = os.environ.get('NEXUS_USERNAME')
 password = os.environ.get('NEXUS_PASSWORD')
 
 # define url and headers
-url = 'https://nexus.ellisbs.co.uk/service/rest/v1/repositories/maven/hosted'
 headers = {
     'accept': 'application/json',
     'Content-Type': 'application/json',
@@ -20,6 +19,10 @@ file_types=['proxy','hosted','group']
 for file_type in file_types:
     for repo_type in os.listdir('repo_config/{}'.format(file_type)):
         print('{}/{}'.format(file_type,repo_type))
+        
+        # modify url for each repo_type
+        url = f'https://nexus.ellisbs.co.uk/service/rest/v1/repositories/{repo_type}/hosted'
+
         for file in os.listdir('repo_config/{}/{}'.format(file_type,repo_type)):
             with open('repo_config/{}/{}/{}'.format(file_type,repo_type,file)) as file:
                 data = json.load(file)

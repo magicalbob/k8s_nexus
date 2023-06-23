@@ -1,0 +1,22 @@
+{
+  "name": "maven-new-hosted",
+  "online": true,
+  "storage": {
+    "blobStoreName": "local",
+    "strictContentTypeValidation": true,
+    "writePolicy": "allow_once"
+  },
+  "cleanup": {
+    "policyNames": [
+      "string"
+    ]
+  },
+  "component": {
+    "proprietaryComponents": true
+  },
+  "maven": {
+    "versionPolicy": "SNAPSHOT",
+    "layoutPolicy": "STRICT",
+    "contentDisposition": "ATTACHMENT"
+  }
+}

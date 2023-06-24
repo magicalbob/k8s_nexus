@@ -8,10 +8,14 @@ json_data = json.load(sys.stdin)
 
 # Go through each item in the JSON data
 for item in json_data:
-    # Get the name, type and format values
+    # Get the name, type, and format values
     name = item.get('name')
     type_ = item.get('type')
     format_ = item.get('format')
+
+    # Remove the unwanted keys
+    item.pop('url', None)
+    item.pop('cleanup', None)
 
     # Construct the file path
     file_path = f'repo_config/{type_}/{format_}/{name}.json'

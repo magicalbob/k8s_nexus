@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import os
 import json
+import sys
 
-# The input JSON data
-json_data = [ ... ]  # replace with your JSON data
+# Read JSON data from stdin
+json_data = json.load(sys.stdin)
 
 # Go through each item in the JSON data
 for item in json_data:

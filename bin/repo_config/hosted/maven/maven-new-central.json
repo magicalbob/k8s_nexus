@@ -2,7 +2,7 @@
   "name": "maven-new-hosted",
   "online": true,
   "storage": {
-    "blobStoreName": "local",
+    "blobStoreName": "dwp-s3",
     "strictContentTypeValidation": true,
     "writePolicy": "allow_once"
   },

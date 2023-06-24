@@ -13,6 +13,11 @@ for item in json_data:
     type_ = item.get('type')
     format_ = item.get('format')
 
+    # If the format is maven2, change it to maven
+    if format_ == 'maven2':
+        format_ = 'maven'
+        item['format'] = format_  # Update the format in the item as well
+
     # Remove the unwanted keys
     item.pop('url', None)
     item.pop('cleanup', None)

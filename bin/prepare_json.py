@@ -21,6 +21,7 @@ for item in json_data:
     # Remove the unwanted keys
     item.pop('url', None)
     item.pop('cleanup', None)
+    item.pop('format', None)
 
     # Construct the file path
     file_path = f'repo_config/{type_}/{format_}/{name}.json'

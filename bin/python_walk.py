@@ -6,6 +6,7 @@ import json
 # get the username and password from environment variables
 username = os.environ.get('NEXUS_USERNAME')
 password = os.environ.get('NEXUS_PASSWORD')
+nexus_host = os.environ.get('NEXUS_HOST')
 
 # define url and headers
 headers = {
@@ -21,7 +22,7 @@ for file_type in file_types:
         print('{}/{}'.format(file_type,repo_type))
         
         # modify url for each file_type and repo_type
-        url = f'https://nexus.ellisbs.co.uk/service/rest/v1/repositories/{repo_type}/{file_type}'
+        url = f'https://{nexus_host}/service/rest/v1/repositories/{repo_type}/{file_type}'
 
         for file in os.listdir('repo_config/{}/{}'.format(file_type,repo_type)):
             with open('repo_config/{}/{}/{}'.format(file_type,repo_type,file)) as file:

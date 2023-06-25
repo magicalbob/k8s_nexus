@@ -6,9 +6,10 @@ import json
 # Get the username and password from environment variables
 username = os.environ.get('NEXUS_USERNAME')
 password = os.environ.get('NEXUS_PASSWORD')
+nexus_host = os.environ.get('NEXUS_HOST')
 
 # Define URL and headers
-url = 'https://nexus.ellisbs.co.uk/service/rest/v1/repositories' # Nexus repositories endpoint
+url = f'https://{nexus_host}/service/rest/v1/repositories' # Nexus repositories endpoint
 headers = {
     'accept': 'application/json',
     'Content-Type': 'application/json',

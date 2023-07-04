@@ -1,6 +1,6 @@
 94
-wrap:file:system/io/swagger/swagger-jaxrs/1.6.2/swagger-jaxrs-1.6.2.jar$overwrite=merge&Import-Package=com.google.common.*,org.reflections.*;resolution:=optional,*
+wrap:file:system/io/swagger/swagger-core/1.6.2/swagger-core-1.6.2.jar$overwrite=merge&Import-Package=com.google.common.*,javax.validation.*,*
 32
 80
-1681465072921
+1687931947092
 0

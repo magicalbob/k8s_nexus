@@ -3,6 +3,6 @@ apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
 - role: control-plane
   extraMounts:
-  - hostPath: /home/ian/src/vagrant/vagrant-kubeadm-kubernetes/k8s_nexus/nexus-data
+  - hostPath: /Users/ian/Documents/src/k8s_nexus/nexus-data
     containerPath: /mnt/nexus-data
 

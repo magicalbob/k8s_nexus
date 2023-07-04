@@ -1,6 +1,6 @@
 80
-wrap:file:system/org/jboss/resteasy/resteasy-jaxrs/3.15.3.Final/resteasy-jaxrs-3.15.3.Final.jar$Bundle-SymbolicName=resteasy-jaxrs&Fragment-Host=org.sonatype.nexus.siesta
+wrap:file:system/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar$Bundle-SymbolicName=httpclient&Fragment-Host=httpcore
 2
 80
-1681465071773
+1687931939776
 0

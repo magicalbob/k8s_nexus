@@ -1,1 +1,1 @@
-wrap:file:system/jakarta/validation/jakarta.validation-api/2.0.2/jakarta.validation-api-2.0.2.jar$overwrite=merge&Fragment-Host=org.hibernate.validator
+wrap:file:system/org/glassfish/jakarta.el/3.0.4/jakarta.el-3.0.4.jar$overwrite=merge&Fragment-Host=org.hibernate.validator

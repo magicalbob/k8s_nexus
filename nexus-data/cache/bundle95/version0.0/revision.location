@@ -1,1 +1,1 @@
-wrap:file:system/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar$overwrite=merge&Import-Package=*;resolution:=optional
+wrap:file:system/io/swagger/swagger-jaxrs/1.6.2/swagger-jaxrs-1.6.2.jar$overwrite=merge&Import-Package=com.google.common.*,org.reflections.*;resolution:=optional,*

@@ -1,1 +1,1 @@
-wrap:file:system/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar$Bundle-SymbolicName=httpcore
+wrap:file:system/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar$overwrite=merge&Fragment-Host=org.hibernate.validator

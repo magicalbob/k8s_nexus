@@ -1,1 +1,1 @@
-wrap:file:system/com/auth0/java-jwt/3.16.0/java-jwt-3.16.0.jar
+reference:file:system/org/sonatype/nexus/nexus-security/3.51.0-01/nexus-security-3.51.0-01.jar

@@ -1,6 +1,6 @@
 283
-reference:file:system/com/sonatype/nexus/plugins/nexus-migration-plugin/3.51.0-01/nexus-migration-plugin-3.51.0-01.jar
-32
-200
-1681465084074
+wrap:file:system/com/sonatype/insight/brain/insight-rm-common/1.133.0-02/insight-rm-common-1.133.0-02.jar$Bundle-SymbolicName=insight-rm-common&Fragment-Host=com.sonatype.clm.dto.model
+2
+80
+1687931973217
 0

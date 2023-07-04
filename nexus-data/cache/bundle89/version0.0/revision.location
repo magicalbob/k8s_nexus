@@ -1,1 +1,1 @@
-wrap:file:system/org/apache/shiro/shiro-guice/1.10.0/shiro-guice-1.10.0.jar$overwrite=merge&Import-Package=*
+wrap:file:system/com/github/fge/json-patch/1.9/json-patch-1.9.jar$overwrite=merge&Import-Package=*

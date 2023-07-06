@@ -69,13 +69,13 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Role: [
       {
-        name: 'readFromSource',
-        len: 1,
+        name: 'read',
+        len: 0,
         formHandler: false
       },
       {
-        name: 'read',
-        len: 0,
+        name: 'readFromSource',
+        len: 1,
         formHandler: false
       },
       {
@@ -140,16 +140,6 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'readGroupable',
-        len: 1,
-        formHandler: false
-      },
-      {
-        name: 'defaultWorkDirectory',
-        len: 0,
-        formHandler: false
-      },
-      {
         name: 'update',
         len: 1,
         formHandler: false
@@ -157,6 +147,16 @@ NX.direct.api.REMOTING_API = {
       {
         name: 'create',
         len: 1,
+        formHandler: false
+      },
+      {
+        name: 'readGroupable',
+        len: 1,
+        formHandler: false
+      },
+      {
+        name: 'defaultWorkDirectory',
+        len: 0,
         formHandler: false
       },
       {
@@ -214,6 +214,11 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
+        name: 'connect',
+        len: 4,
+        formHandler: false
+      },
+      {
         name: 'stopWaiting',
         len: 0,
         formHandler: false
@@ -221,11 +226,6 @@ NX.direct.api.REMOTING_API = {
       {
         name: 'syncStatus',
         len: 0,
-        formHandler: false
-      },
-      {
-        name: 'connect',
-        len: 4,
         formHandler: false
       },
       {
@@ -315,13 +315,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'readTypes',
-        len: 0,
+        name: 'run',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'run',
-        len: 1,
+        name: 'readTypes',
+        len: 0,
         formHandler: false
       },
       {
@@ -495,12 +495,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'getUser',
+        name: 'getPermissions',
         len: 0,
         formHandler: false
       },
       {
-        name: 'getPermissions',
+        name: 'getUser',
         len: 0,
         formHandler: false
       },
@@ -675,13 +675,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'verifyUserMapping',
-        len: 1,
+        name: 'read',
+        len: 0,
         formHandler: false
       },
       {
-        name: 'read',
-        len: 0,
+        name: 'verifyUserMapping',
+        len: 1,
         formHandler: false
       },
       {
@@ -710,12 +710,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'changeOrder',
+        name: 'remove',
         len: 1,
         formHandler: false
       },
       {
-        name: 'remove',
+        name: 'changeOrder',
         len: 1,
         formHandler: false
       }
@@ -808,13 +808,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'readRecipes',
-        len: 0,
+        name: 'remove',
+        len: 1,
         formHandler: false
       },
       {
-        name: 'remove',
-        len: 1,
+        name: 'readRecipes',
+        len: 0,
         formHandler: false
       }
     ],

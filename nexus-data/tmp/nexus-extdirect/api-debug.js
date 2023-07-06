@@ -78,13 +78,13 @@ NX.direct.api.REMOTING_API = {
     ],
     coreui_Role: [
       {
-        name: 'read'/*() => java.util.List */,
-        len: 0,
+        name: 'readFromSource'/*(String) => java.util.List */,
+        len: 1,
         formHandler: false
       },
       {
-        name: 'readFromSource'/*(String) => java.util.List */,
-        len: 1,
+        name: 'read'/*() => java.util.List */,
+        len: 0,
         formHandler: false
       },
       {
@@ -149,16 +149,6 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'update'/*(org.sonatype.nexus.coreui.BlobStoreXO) => org.sonatype.nexus.coreui.BlobStoreXO */,
-        len: 1,
-        formHandler: false
-      },
-      {
-        name: 'create'/*(org.sonatype.nexus.coreui.BlobStoreXO) => org.sonatype.nexus.coreui.BlobStoreXO */,
-        len: 1,
-        formHandler: false
-      },
-      {
         name: 'readGroupable'/*(org.sonatype.nexus.extdirect.model.StoreLoadParameters) => java.util.List */,
         len: 1,
         formHandler: false
@@ -166,6 +156,16 @@ NX.direct.api.REMOTING_API = {
       {
         name: 'defaultWorkDirectory'/*() => org.sonatype.nexus.coreui.PathSeparatorXO */,
         len: 0,
+        formHandler: false
+      },
+      {
+        name: 'update'/*(org.sonatype.nexus.coreui.BlobStoreXO) => org.sonatype.nexus.coreui.BlobStoreXO */,
+        len: 1,
+        formHandler: false
+      },
+      {
+        name: 'create'/*(org.sonatype.nexus.coreui.BlobStoreXO) => org.sonatype.nexus.coreui.BlobStoreXO */,
+        len: 1,
         formHandler: false
       },
       {
@@ -223,11 +223,6 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'connect'/*(String, String, int, Boolean) => void */,
-        len: 4,
-        formHandler: false
-      },
-      {
         name: 'stopWaiting'/*() => boolean */,
         len: 0,
         formHandler: false
@@ -235,6 +230,11 @@ NX.direct.api.REMOTING_API = {
       {
         name: 'syncStatus'/*() => com.sonatype.nexus.migration.ui.AssistantComponent$SyncStatusXO */,
         len: 0,
+        formHandler: false
+      },
+      {
+        name: 'connect'/*(String, String, int, Boolean) => void */,
+        len: 4,
         formHandler: false
       },
       {
@@ -324,13 +324,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'run'/*(String) => void */,
-        len: 1,
+        name: 'readTypes'/*() => java.util.List */,
+        len: 0,
         formHandler: false
       },
       {
-        name: 'readTypes'/*() => java.util.List */,
-        len: 0,
+        name: 'run'/*(String) => void */,
+        len: 1,
         formHandler: false
       },
       {
@@ -504,12 +504,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'getPermissions'/*() => java.util.List */,
+        name: 'getUser'/*() => org.sonatype.nexus.rapture.internal.security.UserXO */,
         len: 0,
         formHandler: false
       },
       {
-        name: 'getUser'/*() => org.sonatype.nexus.rapture.internal.security.UserXO */,
+        name: 'getPermissions'/*() => java.util.List */,
         len: 0,
         formHandler: false
       },
@@ -684,13 +684,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'read'/*() => java.util.List */,
-        len: 0,
+        name: 'verifyUserMapping'/*(org.sonatype.nexus.ldap.internal.ui.LdapServerXO) => java.util.Collection */,
+        len: 1,
         formHandler: false
       },
       {
-        name: 'verifyUserMapping'/*(org.sonatype.nexus.ldap.internal.ui.LdapServerXO) => java.util.Collection */,
-        len: 1,
+        name: 'read'/*() => java.util.List */,
+        len: 0,
         formHandler: false
       },
       {
@@ -719,12 +719,12 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'remove'/*(String) => void */,
+        name: 'changeOrder'/*(java.util.List) => void */,
         len: 1,
         formHandler: false
       },
       {
-        name: 'changeOrder'/*(java.util.List) => void */,
+        name: 'remove'/*(String) => void */,
         len: 1,
         formHandler: false
       }
@@ -817,13 +817,13 @@ NX.direct.api.REMOTING_API = {
         formHandler: false
       },
       {
-        name: 'remove'/*(String) => void */,
-        len: 1,
+        name: 'readRecipes'/*() => java.util.List */,
+        len: 0,
         formHandler: false
       },
       {
-        name: 'readRecipes'/*() => java.util.List */,
-        len: 0,
+        name: 'remove'/*(String) => void */,
+        len: 1,
         formHandler: false
       }
     ],

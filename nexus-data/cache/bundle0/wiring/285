@@ -111,7 +111,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.firewa
 osgi.wiring.package; (osgi.wiring.package=org.codehaus.plexus.util)
 190; version=0.0.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.storage)(version>=3.51.0))
-257; version=3.51.0
+259; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.httpclient)(version>=3.51.0))
 165; version=3.51.0
 osgi.wiring.package; (osgi.wiring.package=org.apache.http)
@@ -223,7 +223,7 @@ osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.conten
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.clm.dto.model.rhc)(version>=1.49.0))
 286; version=1.49.5.01
 osgi.wiring.package; (&(osgi.wiring.package=org.sonatype.nexus.repository.view)(version>=3.51.0))
-261; version=3.51.0
+257; version=3.51.0
 osgi.wiring.package; (&(osgi.wiring.package=com.sonatype.clm.dto.model.repository.migration)(version>=1.49.0))
 286; version=1.49.5.01
 osgi.wiring.package; (osgi.wiring.package=org.apache.http.client)

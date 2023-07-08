@@ -35,14 +35,8 @@ kubectl apply -f nexus.vmoptions.yml
 
 # sort out persistent volume
 export NODE_NAME=$(kubectl get nodes |grep control-plan|cut -d\  -f1)
-if [ $KIND -eq 1 ]
-then
-  envsubst < nexus.deploy.pv.kind.yml.template > nexus.deploy.pv.kind.yml
-  kubectl apply -f nexus.deploy.pv.kind.yml
-else
-  envsubst < nexus.deploy.pv.linux.yml.template > nexus.deploy.pv.linux.yml
-  kubectl apply -f nexus.deploy.pv.linux.yml
-fi
+envsubst < nexus.deploy.pv.kind.yml.template > nexus.deploy.pv.kind.yml
+kubectl apply -f nexus.deploy.pv.kind.yml
 
 # create common deployment
 kubectl apply -f nexus.deploy.common.yml

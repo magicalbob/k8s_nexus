@@ -6,7 +6,7 @@ metadata:
 data:
   nexus.vmoptions: |
     -Xms4g
-    -Xmx4g
+    -Xmx2g
     -XX:MaxDirectMemorySize=6g
     -XX:+UnlockExperimentalVMOptions
     -XX:+UseCGroupMemoryLimitForHeap

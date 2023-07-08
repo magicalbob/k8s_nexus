@@ -1,31 +1,17 @@
-USAGE="$0 [kind]"
-
-KIND=0
-
-if [ $# -gt 1 ]
+# Make sure cluster exists if Mac
+kind  get clusters 2>&1 | grep "kind-nexus"
+if [ $? -gt 0 ]
 then
-  echo $USAGE
-  exit 1
-elif [ $# -eq 1 ]
-then
-  if [ $1 == "kind" ]
-  then
-    KIND=1
-  else
-    echo $USAGE
-    exit 1
-  fi
+    envsubst < kind-config.yaml.template > kind-config.yaml
+    kind create cluster --config kind-config.yaml --name kind-nexus
 fi
 
-# Make sure cluster exists if Mac
-if [ $KIND -eq 1 ]
+# Make sure create cluster succeeded
+kind  get clusters 2>&1 | grep "kind-nexus"
+if [ $? -gt 0 ]
 then
-  kind  get clusters 2>&1 | grep "kind-nexus"
-  if [ $? -gt 0 ]
-  then
-      envsubst < kind-config.yaml.template > kind-config.yaml
-      kind create cluster --config kind-config.yaml --name kind-nexus
-  fi
+    echo "Creation of cluster failed. Aborting."
+    exit 666
 fi
 
 # add metrics

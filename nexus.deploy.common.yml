@@ -23,7 +23,7 @@ spec:
         fsGroup: 0
       containers:
       - name: nexus
-        image: sonatype/nexus3:3.51.0
+        image: sonatype/nexus3:3.57.0
         ports:
         - containerPort: 8081
         resources:

@@ -63,9 +63,10 @@ def main():
             })
             print(f'Created user: {user_id}')
 
-    # Write the created users' userId and password to the specified output file
+    # Write the created users' userId and password to the specified output file with formatted JSON
     with open(nexus_output, 'w') as output_file:
-        json.dump(created_users, output_file)
+        json.dump(created_users, output_file, indent=4)
 
 if __name__ == '__main__':
     main()
+

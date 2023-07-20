@@ -2,10 +2,12 @@ import os
 import requests
 import json
 
-def create_content_selector_privileges(json_file, nexus_url):
+def create_content_selector_privileges():
     # Get Nexus username and password from environment variables
     username = os.environ.get('NEXUS_USERNAME')
     password = os.environ.get('NEXUS_PASSWORD')
+    nexus_host = os.environ.get('NEXUS_HOST')
+    json_file = os.environ.get('NEXUS_SELECTORS')
 
     # Read the JSON file
     with open(json_file, 'r') as f:
@@ -13,7 +15,7 @@ def create_content_selector_privileges(json_file, nexus_url):
 
     # Iterate over the privileges and create them using the Nexus API
     for privilege in privileges:
-        endpoint = f"{nexus_url}/service/rest/v1/security/privileges/repository-content-selector"
+        endpoint = f"https://{nexus_host}/service/rest/v1/security/privileges/repository-content-selector"
         headers = {
             'Content-Type': 'application/json'
         }
@@ -25,7 +27,4 @@ def create_content_selector_privileges(json_file, nexus_url):
             print(f"Failed to create privilege '{privilege['name']}'. Error: {response.text}")
 
 # Usage
-json_file = 'privileges.json'
-nexus_url = 'https://nexus.ellisbs.co.uk'
-create_content_selector_privileges(json_file, nexus_url)
-
+create_content_selector_privileges()

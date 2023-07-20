@@ -5,9 +5,10 @@ def delete_all_content_selector_privileges(nexus_url):
     # Get Nexus username and password from environment variables
     username = os.environ.get('NEXUS_USERNAME')
     password = os.environ.get('NEXUS_PASSWORD')
+    nexus_host = os.environ.get('NEXUS_HOST')
 
     # Endpoint to retrieve the list of content selector privileges
-    endpoint = f"{nexus_url}/service/rest/v1/security/privileges"
+    endpoint = f"https://{nexus_host}/service/rest/v1/security/privileges"
 
     # Send a GET request to retrieve the list of content selector privileges
     response = requests.get(endpoint, auth=(username, password))
@@ -27,7 +28,5 @@ def delete_all_content_selector_privileges(nexus_url):
         else:
             print(f"Failed to delete content selector privilege with ID '{privilege_id}'. Status Code: {delete_response.status_code}, Error: {delete_response.text}")
 
-# Usage
-nexus_url = 'https://nexus.ellisbs.co.uk'
-delete_all_content_selector_privileges(nexus_url)
+delete_all_content_selector_privileges()
 

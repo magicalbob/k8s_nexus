@@ -3,18 +3,20 @@ import os
 import requests
 import json
 
-def create_content_selectors(json_file, nexus_url):
+def create_content_selectors():
+    # Get Nexus username and password from environment variables
+    username = os.environ.get('NEXUS_USERNAME')
+    password = os.environ.get('NEXUS_PASSWORD')
+    nexus_host = os.environ.get('NEXUS_HOST')
+    json_file = os.environ.get('NEXUS_SELECTORS')
+
     # Read the JSON file
     with open(json_file, 'r') as f:
         selectors = json.load(f)
 
-    # Get Nexus username and password from environment variables
-    username = os.environ.get('NEXUS_USERNAME')
-    password = os.environ.get('NEXUS_PASSWORD')
-
     # Iterate over the selectors and create them using the Nexus API
     for selector in selectors:
-        endpoint = f"{nexus_url}/service/rest/v1/security/content-selectors"
+        endpoint = f"https://{nexus_host}/service/rest/v1/security/content-selectors"
         headers = {
             'Content-Type': 'application/json'
         }
@@ -26,7 +28,4 @@ def create_content_selectors(json_file, nexus_url):
             print(f"Failed to create content selector '{selector['name']}'. Status Code: {response.status_code}, Error: {response.text}")
 
 # Usage
-json_file = 'selectors.json'
-nexus_url = 'https://nexus.ellisbs.co.uk'
-create_content_selectors(json_file, nexus_url)
-
+create_content_selectors()

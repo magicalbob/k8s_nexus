@@ -18,5 +18,5 @@ spec:
         - key: kubernetes.io/hostname
           operator: In
           values:
-          - $NODE_NAME
+          - node6
 

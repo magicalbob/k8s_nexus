@@ -1,0 +1,15 @@
+[Unit]
+Description=Kubectl Port Forward 8081
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=vagrant
+Group=vagrant
+Type=simple
+ExecStart=/bin/bash -c "kubectl port-forward service/nexus -n nexus --address 192.168.200.201 8081:8081"
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

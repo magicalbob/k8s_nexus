@@ -1,0 +1,92 @@
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nexus-postgres-data
+  namespace: nexus
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: local-storage
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: nexus
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:13
+          env:
+            - name: POSTGRES_USER
+              value: nexus
+            - name: POSTGRES_PASSWORD
+              value: nexuspassword
+            - name: POSTGRES_DB
+              value: nexus
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: nexus-postgres-data
+              mountPath: /var/lib/postgresql/data
+            - name: config
+              mountPath: /docker-entrypoint-initdb.d/postgresql.conf
+              subPath: postgresql.conf
+      volumes:
+        - name: nexus-postgres-data
+          persistentVolumeClaim:
+            claimName: nexus-postgres-data
+        - name: config
+          configMap:
+            name: nexus-postgres-config
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: nexus
+spec:
+  selector:
+    app: postgres
+  type: NodePort
+  ports:
+    - name: postgres
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
+  externalIPs:
+    - 10.233.0.142
+
+---
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nexus-postgres-config
+  namespace: nexus
+data:
+  postgresql.conf: |
+    # Add your custom postgresql.conf configuration here
+    #     # Example:
+    #         max_connections = 100
+    #             shared_buffers = 128MB
+    #
+    data_directory = '/postgres-data'

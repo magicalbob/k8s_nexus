@@ -23,7 +23,7 @@ spec:
         fsGroup: 0
       containers:
       - name: nexus
-        image: sonatype/nexus3:3.51.0
+        image: sonatype/nexus3:3.59.0
         ports:
         - containerPort: 8081
         resources:
@@ -40,8 +40,6 @@ spec:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus-data
-      imagePullSecrets:
-        - name: my-docker-credentials
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -55,4 +53,3 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: local-storage
-

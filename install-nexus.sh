@@ -55,17 +55,22 @@ kubectl apply -f nexus.vmoptions.yml
 if [ "X{$USE_KIND}" == "XX" ];then
   export NODE_NAME=$(kubectl get nodes |grep control-plane|cut -d\  -f1|head -1)
   envsubst < nexus.deploy.pv.kind.yml.template > nexus.deploy.pv.yml
+  envsubst < nexus.postgres.pv.kind.yml.template >> nexus.deploy.pv.yml
 else
   export NODE_NAME=$(kubectl get nodes | grep -v ^NAME|grep -v control-plane|cut -d\  -f1|head -1)
   envsubst < nexus.deploy.pv.linux.yml.template > nexus.deploy.pv.yml
+  envsubst < nexus.postgres.pv.linux.yml.template >> nexus.deploy.pv.yml
   echo mkdir -p ${PWD}/nexus-data|ssh -o StrictHostKeyChecking=no ${NODE_NAME}
 fi
 kubectl apply -f nexus.deploy.pv.yml
 
+# postgres deployment
+kubectl apply -f nexus.postgres.yml
+
 # create common deployment
 kubectl apply -f nexus.deploy.common.yml
 
-until kubectl logs deployment.apps/nexus -n nexus |grep "Started Sonatype Nexus OSS"; do echo waiting for nexus; sleep 5; done
+until kubectl logs deployment.apps/nexus -n nexus |grep "Started Sonatype Nexus "; do echo waiting for nexus; sleep 5; done
 
 # check status
 kubectl get all -n nexus

@@ -36,10 +36,15 @@ spec:
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data
+        - name: nexus-vmoptions-volume
+          mountPath: /nexus-vmoptions
       volumes:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus-data
+      - name: nexus-vmoptions-volume
+        configMap:
+          name: nexus-vmoptions
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

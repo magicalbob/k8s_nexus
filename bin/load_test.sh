@@ -1,39 +1,18 @@
-#!/usr/bin/env bash
-
-# Env vars required
-ENV_VAR_REQ=$(cat <<-EOM
-You must provide the following environment variables:
-  - NEXUS_HOST      : hostname of Nexus
-  - NEXUS_USERNAME  : Nexus user to use
-  - NEXUS_PASSWORD  : password for that Nexus user
-EOM
-)
-
-# Ensure correct env vars have been supplied
-
-if [ -z "$NEXUS_HOST" ]
-then
-  echo "$ENV_VAR_REQ"
-  exit 1
-fi
-
-if [ -z "$NEXUS_USERNAME" ]
-then
-  echo "$ENV_VAR_REQ"
-  exit 2
-fi
-
-if [ -z "$NEXUS_PASSWORD" ]
-then
-  echo "$ENV_VAR_REQ"
-  exit 3
-fi
+#!/bin/bash
 
 # Define usage message
 usage() {
   echo "Usage: $0 -c <concurrent_requests>" >&2
   exit 1
 }
+
+# Initialize variables
+concurrent_requests=""
+nexus_host="$NEXUS_HOST"
+nexus_username="$NEXUS_USERNAME"
+nexus_password="$NEXUS_PASSWORD"
+success_count=0
+failure_count=0
 
 # Parse command-line options
 while getopts ":c:" opt; do
@@ -57,48 +36,48 @@ if [ -z "$concurrent_requests" ]; then
   echo "Error: Missing mandatory argument -c <concurrent_requests>" >&2
   usage
 fi
- 
-# Nexus Repository Manager URL
-nexus_url="https://${NEXUS_HOST}/repository/repo-name"
 
-# Nexus username and password
-username="${NEXUS_USERNAME}"
-password="${NEXUS_PASSWORD}"
+# Check if NEXUS_HOST environment variable is provided
+if [ -z "$nexus_host" ]; then
+  echo "Error: NEXUS_HOST environment variable is not set. Please provide a value for NEXUS_HOST." >&2
+  usage
+fi
 
-# Function to upload a file to Nexus
-upload_file() {
-  local file_path="$1"
-  local target_path="$2"
-  curl -u "${username}:${password}" -X PUT "${nexus_url}/${target_path}" --upload-file "${file_path}"
+# Check if other required environment variables are provided
+if [ -z "$nexus_username" ] || [ -z "$nexus_password" ]; then
+  echo "Error: NEXUS_USERNAME and/or NEXUS_PASSWORD environment variables are not set. Please provide values for both." >&2
+  usage
+fi
+
+# Function to perform a test request
+perform_test_request() {
+  local response_code
+  response_code=$(curl -s -o /dev/null -w "%{http_code}" --user "$nexus_username:$nexus_password" "https://${nexus_host}/your-api-endpoint")
+
+  if [ "$response_code" == "200" ]; then
+    echo "Request successful (HTTP $response_code)"
+    success_count=$((success_count + 1))
+  else
+    echo "Request failed (HTTP $response_code)"
+    failure_count=$((failure_count + 1))
+  fi
 }
 
-# Function to download a file from Nexus
-download_file() {
-  local target_path="$1"
-  curl -u "${username}:${password}" -OJ "${nexus_url}/${target_path}"
-}
-
-# Perform upload and download tests concurrently
+# Run concurrent requests
 for ((i = 1; i <= concurrent_requests; i++)); do
-  (
-    # Generate a unique filename for each request
-    file_name="testfile_${i}.txt"
-    file_content="This is test file ${i}."
-    echo "${file_content}" > "${file_name}"
-
-    # Upload a file to Nexus
-    upload_file "${file_name}" "uploads/${file_name}"
-
-    # Download the uploaded file from Nexus
-    download_file "uploads/${file_name}"
-
-    # Clean up the local file
-    rm "${file_name}"
-  ) &
+  perform_test_request
 done
 
-# Wait for all concurrent requests to finish
-wait
+# Display summary
+echo "Summary:"
+echo "Successful requests: $success_count"
+echo "Failed requests: $failure_count"
 
-echo "Load test completed!"
+# Check if any requests failed and exit with an appropriate message
+if [ "$failure_count" -gt 0 ]; then
+  echo "Load test encountered failures. Please investigate."
+  exit 1
+fi
+
+echo "Load test completed successfully."
 

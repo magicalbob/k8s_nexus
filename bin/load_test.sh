@@ -1,4 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# Env vars required
+ENV_VAR_REQ=$(cat <<-EOM
+You must provide the following environment variables:
+  - NEXUS_HOST      : hostname of Nexus
+  - NEXUS_USERNAME  : Nexus user to use
+  - NEXUS_PASSWORD  : password for that Nexus user
+EOM
+)
+
+# Ensure correct env vars have been supplied
+
+if [ -z "$NEXUS_HOST" ]
+then
+  echo "$ENV_VAR_REQ"
+  exit 1
+fi
+
+if [ -z "$NEXUS_USERNAME" ]
+then
+  echo "$ENV_VAR_REQ"
+  exit 2
+fi
+
+if [ -z "$NEXUS_PASSWORD" ]
+then
+  echo "$ENV_VAR_REQ"
+  exit 3
+fi
 
 # Nexus Repository Manager URL
 nexus_url="https://${NEXUS_HOST}/repository/repo-name"

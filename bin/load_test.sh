@@ -29,11 +29,37 @@ then
   exit 3
 fi
 
+# Define usage message
+usage() {
+  echo "Usage: $0 -c <concurrent_requests>" >&2
+  exit 1
+}
+
+# Parse command-line options
+while getopts ":c:" opt; do
+  case $opt in
+    c)
+      concurrent_requests="$OPTARG"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      usage
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      usage
+      ;;
+  esac
+done
+
+# Check if concurrent_requests is provided
+if [ -z "$concurrent_requests" ]; then
+  echo "Error: Missing mandatory argument -c <concurrent_requests>" >&2
+  usage
+fi
+ 
 # Nexus Repository Manager URL
 nexus_url="https://${NEXUS_HOST}/repository/repo-name"
-
-# Number of concurrent requests
-concurrent_requests=10
 
 # Nexus username and password
 username="${NEXUS_USERNAME}"

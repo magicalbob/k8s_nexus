@@ -50,22 +50,47 @@ if [ -z "$nexus_username" ] || [ -z "$nexus_password" ]; then
 fi
 
 # Function to perform a test request
-perform_test_request() {
+# Function to perform a test request to upload a component
+perform_upload_test_request() {
   local response_code
-  response_code=$(curl -s -o /dev/null -w "%{http_code}" --user "$nexus_username:$nexus_password" "https://${nexus_host}/your-api-endpoint")
+  local response_body
 
-  if [ "$response_code" == "200" ]; then
-    echo "Request successful (HTTP $response_code)"
+  # Capture both response code and response body
+  response=$(curl -s -o /dev/null -w "%{http_code}" \
+    --user "$nexus_username:$nexus_password" \
+    -X POST \
+    -H 'accept: application/json' \
+    -H 'Content-Type: multipart/form-data' \
+    -H 'NX-ANTI-CSRF-TOKEN: 0.763232663911438' \
+    -H 'X-Nexus-UI: true' \
+    -F 'pypi.asset=@ctime-package-2.1.tar.gz;type=application/x-gzip' \
+    "https://${nexus_host}/service/rest/v1/components?repository=pypi-hosted")
+
+
+  response_body=$(curl -s \
+    --user "$nexus_username:$nexus_password" \
+    -X POST \
+    -H 'accept: application/json' \
+    -H 'Content-Type: multipart/form-data' \
+    -H 'NX-ANTI-CSRF-TOKEN: 0.763232663911438' \
+    -H 'X-Nexus-UI: true' \
+    -F 'pypi.asset=@ctime-package-2.1.tar.gz;type=application/x-gzip' \
+    "https://${nexus_host}/service/rest/v1/components?repository=pypi-hosted")
+
+  if [ "$response" == "204" ]; then
+    echo "Upload successful (HTTP $response_code)"
     success_count=$((success_count + 1))
   else
-    echo "Request failed (HTTP $response_code)"
+    echo "Upload failed (HTTP $response_code)"
+    echo "Response body: $response_body"  # Log the response body for debugging
     failure_count=$((failure_count + 1))
   fi
 }
 
+
 # Run concurrent requests
 for ((i = 1; i <= concurrent_requests; i++)); do
-  perform_test_request
+  perform_upload_test_request
 done
 
 # Display summary

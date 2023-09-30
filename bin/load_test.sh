@@ -2,12 +2,13 @@
 
 # Define usage message
 usage() {
-  echo "Usage: $0 -c <concurrent_requests>" >&2
+  echo "Usage: $0 -c <concurrent_requests> -p <component_path>" >&2
   exit 1
 }
 
 # Initialize variables
 concurrent_requests=""
+component_path=""
 nexus_host="$NEXUS_HOST"
 nexus_username="$NEXUS_USERNAME"
 nexus_password="$NEXUS_PASSWORD"
@@ -15,10 +16,13 @@ success_count=0
 failure_count=0
 
 # Parse command-line options
-while getopts ":c:" opt; do
+while getopts ":c:p:" opt; do
   case $opt in
     c)
       concurrent_requests="$OPTARG"
+      ;;
+    p)
+      component_path="$OPTARG"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
@@ -31,9 +35,9 @@ while getopts ":c:" opt; do
   esac
 done
 
-# Check if concurrent_requests is provided
-if [ -z "$concurrent_requests" ]; then
-  echo "Error: Missing mandatory argument -c <concurrent_requests>" >&2
+# Check if concurrent_requests and component_path are provided
+if [ -z "$concurrent_requests" ] || [ -z "$component_path" ]; then
+  echo "Error: Missing mandatory argument(s)." >&2
   usage
 fi
 
@@ -49,7 +53,6 @@ if [ -z "$nexus_username" ] || [ -z "$nexus_password" ]; then
   usage
 fi
 
-# Function to perform a test request
 # Function to perform a test request to upload a component
 perform_upload_test_request() {
   local response_code
@@ -63,9 +66,8 @@ perform_upload_test_request() {
     -H 'Content-Type: multipart/form-data' \
     -H 'NX-ANTI-CSRF-TOKEN: 0.763232663911438' \
     -H 'X-Nexus-UI: true' \
-    -F 'pypi.asset=@ctime-package-2.1.tar.gz;type=application/x-gzip' \
+    -F "pypi.asset=@$component_path;type=application/x-gzip" \
     "https://${nexus_host}/service/rest/v1/components?repository=pypi-hosted")
-
 
   response_body=$(curl -s \
     --user "$nexus_username:$nexus_password" \
@@ -74,7 +76,7 @@ perform_upload_test_request() {
     -H 'Content-Type: multipart/form-data' \
     -H 'NX-ANTI-CSRF-TOKEN: 0.763232663911438' \
     -H 'X-Nexus-UI: true' \
-    -F 'pypi.asset=@ctime-package-2.1.tar.gz;type=application/x-gzip' \
+    -F "pypi.asset=@$component_path;type=application/x-gzip" \
     "https://${nexus_host}/service/rest/v1/components?repository=pypi-hosted")
 
   if [ "$response" == "204" ]; then
@@ -86,7 +88,6 @@ perform_upload_test_request() {
     failure_count=$((failure_count + 1))
   fi
 }
-
 
 # Run concurrent requests
 for ((i = 1; i <= concurrent_requests; i++)); do

@@ -1,0 +1,15 @@
+{
+  "name": "r",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "r-hosted",
+      "r-cran"
+    ]
+  },
+  "type": "group"
+}

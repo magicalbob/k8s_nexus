@@ -1,0 +1,18 @@
+{
+  "name": "int-api-snapshot",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW_ONCE"
+  },
+  "maven": {
+    "versionPolicy": "SNAPSHOT",
+    "layoutPolicy": "STRICT",
+    "contentDisposition": null
+  },
+  "component": {
+    "proprietaryComponents": false
+  },
+  "type": "hosted"
+}

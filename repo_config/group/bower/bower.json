@@ -1,0 +1,15 @@
+{
+  "name": "bower",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "bower-hosted",
+      "bower-bower"
+    ]
+  },
+  "type": "group"
+}

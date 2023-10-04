@@ -2,7 +2,7 @@
   "name": "yum-centos",
   "online": true,
   "storage": {
-    "blobStoreName": "dwp-s3",
+    "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {

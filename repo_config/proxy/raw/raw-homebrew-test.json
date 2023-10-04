@@ -1,17 +1,17 @@
 {
-  "name": "yum-epel",
+  "name": "raw-homebrew-test",
   "online": true,
   "storage": {
     "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://github.com/-/v2/packages/container/package/homebrew/core",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
   "negativeCache": {
-    "enabled": true,
+    "enabled": false,
     "timeToLive": 60
   },
   "httpClient": {

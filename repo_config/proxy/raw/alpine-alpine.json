@@ -1,12 +1,12 @@
 {
-  "name": "yum-epel",
+  "name": "alpine-alpine",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": false
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "http://dl-cdn.alpinelinux.org/alpine",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -17,14 +17,7 @@
   "httpClient": {
     "blocked": false,
     "autoBlock": true,
-    "connection": {
-      "retries": null,
-      "userAgentSuffix": null,
-      "timeout": null,
-      "enableCircularRedirects": false,
-      "enableCookies": false,
-      "useTrustStore": false
-    },
+    "connection": null,
     "authentication": null
   },
   "routingRuleName": null,

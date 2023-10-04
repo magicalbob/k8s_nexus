@@ -1,12 +1,13 @@
 {
-  "name": "yum-epel",
+  "name": "maven-mulesoft-third-party",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://repository.mulesoft.org/nexus/content/repositories/public/",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -28,5 +29,10 @@
     "authentication": null
   },
   "routingRuleName": null,
+  "maven": {
+    "versionPolicy": "MIXED",
+    "layoutPolicy": "STRICT",
+    "contentDisposition": "INLINE"
+  },
   "type": "proxy"
 }

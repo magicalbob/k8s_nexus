@@ -1,0 +1,16 @@
+{
+  "name": "nextcloud",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "raw-nextcloud-releases",
+      "raw-nextcloud-prereleases",
+      "raw-nextcloud-daily"
+    ]
+  },
+  "type": "group"
+}

@@ -1,12 +1,13 @@
 {
-  "name": "yum-epel",
+  "name": "npm-npmjs",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://registry.npmjs.org",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -28,5 +29,9 @@
     "authentication": null
   },
   "routingRuleName": null,
+  "npm": {
+    "removeNonCataloged": false,
+    "removeQuarantined": false
+  },
   "type": "proxy"
 }

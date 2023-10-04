@@ -1,0 +1,14 @@
+{
+  "name": "alpine",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": false
+  },
+  "group": {
+    "memberNames": [
+      "alpine-alpine"
+    ]
+  },
+  "type": "group"
+}

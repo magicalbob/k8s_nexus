@@ -1,12 +1,12 @@
 {
-  "name": "yum-epel",
+  "name": "qgis-plugins",
   "online": true,
   "storage": {
     "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://plugins.qgis.org/plugins/",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },

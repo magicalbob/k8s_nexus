@@ -1,0 +1,15 @@
+{
+  "name": "perl",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "perl-hosted",
+      "perl-cpan"
+    ]
+  },
+  "type": "group"
+}

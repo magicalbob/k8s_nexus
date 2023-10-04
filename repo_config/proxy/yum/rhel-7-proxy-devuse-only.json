@@ -2,7 +2,7 @@
   "name": "rhel-7-proxy-devuse-only",
   "online": true,
   "storage": {
-    "blobStoreName": "dwp-s3",
+    "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {

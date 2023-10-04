@@ -1,12 +1,12 @@
 {
-  "name": "yum-epel",
+  "name": "conda-r",
   "online": true,
   "storage": {
     "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://repo.continuum.io/pkgs/r/",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },

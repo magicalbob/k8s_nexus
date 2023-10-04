@@ -1,0 +1,13 @@
+{
+  "name": "raw-config",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
+  },
+  "component": {
+    "proprietaryComponents": false
+  },
+  "type": "hosted"
+}

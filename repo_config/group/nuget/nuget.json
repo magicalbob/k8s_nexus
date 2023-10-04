@@ -1,0 +1,15 @@
+{
+  "name": "nuget",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "nuget-hosted",
+      "nuget-nuget"
+    ]
+  },
+  "type": "group"
+}

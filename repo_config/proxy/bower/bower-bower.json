@@ -1,12 +1,13 @@
 {
-  "name": "yum-epel",
+  "name": "bower-bower",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://registry.bower.io",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -28,5 +29,8 @@
     "authentication": null
   },
   "routingRuleName": null,
+  "bower": {
+    "rewritePackageUrls": true
+  },
   "type": "proxy"
 }

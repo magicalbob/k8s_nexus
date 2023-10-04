@@ -1,0 +1,16 @@
+{
+  "name": "yum",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "yum-hosted",
+      "yum-redhat-ubi",
+      "yum-centos"
+    ]
+  },
+  "type": "group"
+}

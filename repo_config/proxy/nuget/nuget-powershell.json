@@ -1,12 +1,13 @@
 {
-  "name": "yum-epel",
+  "name": "nuget-powershell",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "https://www.powershellgallery.com/api/v2",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -28,5 +29,9 @@
     "authentication": null
   },
   "routingRuleName": null,
+  "nugetProxy": {
+    "queryCacheItemMaxAge": 3600,
+    "nugetVersion": "V2"
+  },
   "type": "proxy"
 }

@@ -1,0 +1,15 @@
+{
+  "name": "rubygems",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "rubygems-hosted",
+      "rubygems-rubygems"
+    ]
+  },
+  "type": "group"
+}

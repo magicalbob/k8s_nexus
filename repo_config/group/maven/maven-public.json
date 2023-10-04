@@ -1,0 +1,21 @@
+{
+  "name": "maven-public",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "maven-releases",
+      "maven-snapshots",
+      "maven-redhat",
+      "maven-jcenter",
+      "maven-clojars-cdn",
+      "maven-clojars-origin",
+      "maven-central-new",
+      "maven-confluent"
+    ]
+  },
+  "type": "group"
+}

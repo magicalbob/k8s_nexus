@@ -1,12 +1,13 @@
 {
-  "name": "yum-epel",
+  "name": "maven-jcenter",
   "online": true,
   "storage": {
     "blobStoreName": "default",
-    "strictContentTypeValidation": true
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW"
   },
   "proxy": {
-    "remoteUrl": "https://dl.fedoraproject.org/pub/epel/",
+    "remoteUrl": "http://jcenter.bintray.com",
     "contentMaxAge": 60,
     "metadataMaxAge": 60
   },
@@ -17,16 +18,14 @@
   "httpClient": {
     "blocked": false,
     "autoBlock": true,
-    "connection": {
-      "retries": null,
-      "userAgentSuffix": null,
-      "timeout": null,
-      "enableCircularRedirects": false,
-      "enableCookies": false,
-      "useTrustStore": false
-    },
+    "connection": null,
     "authentication": null
   },
   "routingRuleName": null,
+  "maven": {
+    "versionPolicy": "RELEASE",
+    "layoutPolicy": "STRICT",
+    "contentDisposition": "INLINE"
+  },
   "type": "proxy"
 }

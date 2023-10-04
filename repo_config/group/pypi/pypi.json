@@ -1,0 +1,17 @@
+{
+  "name": "pypi",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "group": {
+    "memberNames": [
+      "pypi-hosted",
+      "pypi-service-deployment",
+      "pypi-pypi",
+      "pypi-new"
+    ]
+  },
+  "type": "group"
+}

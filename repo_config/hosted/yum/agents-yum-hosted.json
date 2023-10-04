@@ -1,0 +1,17 @@
+{
+  "name": "agents-yum-hosted",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true,
+    "writePolicy": "ALLOW_ONCE"
+  },
+  "yum": {
+    "repodataDepth": 0,
+    "deployPolicy": "STRICT"
+  },
+  "component": {
+    "proprietaryComponents": false
+  },
+  "type": "hosted"
+}

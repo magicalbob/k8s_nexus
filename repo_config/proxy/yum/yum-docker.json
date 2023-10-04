@@ -2,7 +2,7 @@
   "name": "yum-docker",
   "online": true,
   "storage": {
-    "blobStoreName": "dwp-s3",
+    "blobStoreName": "default",
     "strictContentTypeValidation": true
   },
   "proxy": {

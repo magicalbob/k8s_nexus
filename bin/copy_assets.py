@@ -65,7 +65,7 @@ for repo_settings in repository_settings:
     response = requests.get(f'{old_nexus_url}', auth=(old_nexus_username, old_nexus_password))
     assets = response.json()
 
-    # Iterate through assets and download them to the local directory
+    # Iterate through assets
     for asset in assets.get('items', []):
         asset_url = asset['downloadUrl'].replace("http://", "https://")
         asset_path = asset['path']
@@ -87,4 +87,23 @@ for repo_settings in repository_settings:
             local_file.write(asset_content.content)
 
         print(f'Downloaded asset {asset_path} to {local_asset_path}')
+
+        # Determine the field name based on the repository or asset type
+        field_name = get_field_name_for_repository(repo_name)
+
+        # Create a dictionary for the multipart/form-data request
+        files = {
+            field_name: (asset_path, asset_content.content)
+        }
+
+        # Upload the asset to the new Nexus repository
+        try:
+            upload_response = requests.post(new_nexus_url, files=files, headers=headers, auth=(new_nexus_username, new_nexus_password))
+            upload_response.raise_for_status()
+            if upload_response.status_code != 204:
+                print(f'Error uploading asset {asset_path} to new Nexus repository {repo_name}. Status Code: {upload_response.status_code}')
+            else:
+                print(f'Uploaded asset {asset_path} to new Nexus repository {repo_name}')
+        except requests.exceptions.RequestException as upload_error:
+            print(f'Error uploading asset {asset_path} to new Nexus repository {repo_name}: {upload_error}')
 

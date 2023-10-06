@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import mimetypes
+import subprocess
 
 def get_field_name_for_repository(repo_name):
     # Define a mapping of repository names to field names
@@ -96,14 +97,29 @@ for repo_settings in repository_settings:
             field_name: (asset_path, asset_content.content)
         }
 
-        # Upload the asset to the new Nexus repository
+        # Construct the curl command
+        curl_command = [
+            'curl',
+            '--user',
+            f'{new_nexus_username}:{new_nexus_password}',
+            '-X',
+            'POST',
+            '-H',
+            'accept: application/json',
+            '-H',
+            'Content-Type: multipart/form-data',
+            '-H',
+            f'NX-ANTI-CSRF-TOKEN: {0.763232663911438}',  # Replace with the actual anti-CSRF token
+            '-H',
+            'X-Nexus-UI: true',
+            '-F',
+            f'{field_name}=@{local_asset_path}',
+            new_nexus_url,
+        ]
+    
+        # Execute the curl command
         try:
-            upload_response = requests.post(new_nexus_url, files=files, headers=headers, auth=(new_nexus_username, new_nexus_password))
-            upload_response.raise_for_status()
-            if upload_response.status_code != 204:
-                print(f'Error uploading asset {asset_path} to new Nexus repository {repo_name}. Status Code: {upload_response.status_code}')
-            else:
-                print(f'Uploaded asset {asset_path} to new Nexus repository {repo_name}')
-        except requests.exceptions.RequestException as upload_error:
+            subprocess.run(curl_command, check=True)
+            print(f'Uploaded asset {asset_path} to new Nexus repository {repo_name}')
+        except subprocess.CalledProcessError as upload_error:
             print(f'Error uploading asset {asset_path} to new Nexus repository {repo_name}: {upload_error}')
-

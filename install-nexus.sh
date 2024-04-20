@@ -36,7 +36,7 @@ fi
 kubectl apply -f https://dev.ellisbs.co.uk/files/components.yaml
 
 # install local storage
-kubectl apply -f  local-storage-class.yml
+kubectl apply -f  https://dev.ellisbs.co.uk/files/local-storage-class.yaml
 
 # create renovate namespace, if it doesn't exist
 kubectl get ns nexus 2> /dev/null

@@ -65,6 +65,9 @@ kubectl apply -f nexus.deploy.pv.yml
 # create common deployment
 kubectl apply -f nexus.deploy.common.yml
 
+# wait for deployment to be available
+kubectl wait --for=condition=available deployment.apps/nexus -n nexus --timeout=300s
+
 until kubectl logs deployment.apps/nexus -n nexus |grep "Started Sonatype Nexus OSS"; do echo waiting for nexus; sleep 5; done
 
 # check status

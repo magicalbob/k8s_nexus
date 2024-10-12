@@ -1,0 +1,73 @@
+{
+  "name": "docker-sonatype",
+  "online": true,
+  "storage": {
+    "blobStoreName": "default",
+    "strictContentTypeValidation": true
+  },
+  "cleanup": {
+    "policyNames": []
+  },
+  "docker": {
+    "v1Enabled": false,
+    "forceBasicAuth": false
+  },
+  "dockerProxy": {
+    "dockerIndex": true,
+    "useTrustStoreForIndexAccess": false,
+    "indexType": "HUB",
+    "v1Enabled": false,
+    "forceBasicAuth": false,
+    "passThrough": false,
+    "indexName": null,
+    "httpPort": 0,
+    "httpsPort": 443,
+    "useBearerToken": true,
+    "downloadContextPath": null,
+    "v1SearchEnabled": false
+  },
+  "httpClient": {
+    "autoBlock": true,
+    "blocked": false,
+    "connection": {
+      "retries": 0,
+      "userAgentSuffix": null
+    },
+    "connectionPool": {
+      "enabled": true
+    }
+  },
+  "negativeCache": {
+    "enabled": true,
+    "timeToLive": 1440
+  },
+  "proxy": {
+    "remoteUrl": "https://registry-1.docker.io",
+    "contentMaxAge": 1440,
+    "metadataMaxAge": 1440,
+    "remoteAuthentication": null,
+    "remoteAuthenticationPassword": null,
+    "remoteAuthenticationUsername": null,
+    "remoteHttpProxyHost": null,
+    "remoteHttpProxyPort": 8080,
+    "remoteHttpsProxyHost": null,
+    "remoteHttpsProxyPort": 8080,
+    "autoBlock": true,
+    "fileTypeValidation": true,
+    "checksumPolicy": "STRICT",
+    "browseable": true,
+    "fetchers": [],
+    "online": true,
+    "negativeCache": {
+      "enabled": true
+    },
+    "responseCache": {
+      "enabled": true
+    },
+    "remoteIp": "docker.io",
+    "contentUrl": "https://registry-1.docker.io",
+    "contextUrl": "https://registry-1.docker.io"
+  },
+  "recipe": "docker-proxy"
+}
+

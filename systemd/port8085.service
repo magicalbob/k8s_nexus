@@ -7,7 +7,7 @@ After=network-online.target
 User=vagrant
 Group=vagrant
 Type=simple
-ExecStart=/bin/bash -c "kubectl port-forward deployment.apps/nexus -n nexus --address 192.168.200.201 8085:8085"
+ExecStart=/bin/bash -c "kubectl port-forward deployment.apps/nexus -n nexus --address 192.168.0.14 8085:8085"
 Restart=always
 RestartSec=5s
 

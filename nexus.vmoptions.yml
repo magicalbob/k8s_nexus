@@ -1,8 +1,9 @@
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nexus-vmoptions
-  namespace: nexus
+  namespace: newnexus
 data:
   nexus.vmoptions: |
     -Xms4g
@@ -11,4 +12,3 @@ data:
     -XX:+UnlockExperimentalVMOptions
     -XX:+UseCGroupMemoryLimitForHeap
     -Djava.util.prefs.userRoot=/nexus-data/javaprefs
-

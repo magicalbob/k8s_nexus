@@ -39,11 +39,14 @@ kubectl apply -f https://dev.ellisbs.co.uk/files/components.yaml
 kubectl apply -f  local-storage-class.yml
 
 # create renovate namespace, if it doesn't exist
-kubectl get ns nexus 2> /dev/null
+kubectl get ns newnexus 2> /dev/null
 if [ $? -eq 1 ]
 then
-    kubectl create namespace nexus
+    kubectl create namespace newnexus
 fi
+
+# create proxy
+# kubectl apply -f squid.deploy.yml
 
 # create service
 kubectl apply -f nexus.svc.yml
@@ -58,7 +61,7 @@ if [ "X{$USE_KIND}" == "XX" ];then
 else
   export NODE_NAME=$(kubectl get nodes | grep -v ^NAME|grep -v control-plane|cut -d\  -f1|head -1)
   envsubst < nexus.deploy.pv.linux.yml.template > nexus.deploy.pv.yml
-  echo mkdir -p ${PWD}/nexus-data|ssh -o StrictHostKeyChecking=no ${NODE_NAME}
+  echo mkdir -p ${PWD}/newnexus-data|ssh -o StrictHostKeyChecking=no ${NODE_NAME}
 fi
 kubectl apply -f nexus.deploy.pv.yml
 
@@ -66,9 +69,9 @@ kubectl apply -f nexus.deploy.pv.yml
 kubectl apply -f nexus.deploy.common.yml
 
 # wait for deployment to be available
-kubectl wait --for=condition=available deployment.apps/nexus -n nexus --timeout=300s
+kubectl wait --for=condition=available deployment.apps/nexus -n newnexus --timeout=300s
 
-until kubectl logs deployment.apps/nexus -n nexus |grep "Started Sonatype Nexus OSS"; do echo waiting for nexus; sleep 5; done
+until kubectl logs deployment.apps/nexus -n newnexus |grep "Started Sonatype Nexus OSS"; do echo waiting for nexus; sleep 5; done
 
 # check status
-kubectl get all -n nexus
+kubectl get all -n newnexus

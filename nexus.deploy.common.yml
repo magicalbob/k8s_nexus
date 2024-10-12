@@ -1,13 +1,9 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: nexus
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nexus
-  namespace: nexus
+  namespace: newnexus
 spec:
   replicas: 1
   selector:
@@ -23,9 +19,21 @@ spec:
         fsGroup: 0
       containers:
       - name: nexus
-        image: docker.ellisbs.co.uk:5000/newnexus3:3.60.0
+        # image: docker.ellisbs.co.uk:5190/sonatype/nexus3:3.71.0
+        image: docker.ellisbs.co.uk:5190/newnexus3:3.60.0
         ports:
         - containerPort: 8081
+        env:
+        - name: HTTP_PROXY
+          value: "http://192.168.0.14:3128"
+        - name: HTTPS_PROXY
+          value: "http://192.168.0.14:3128"
+        - name: http_proxy
+          value: "http://192.168.0.14:3128"
+        - name: https_proxy
+          value: "http://192.168.0.14:3128"
+        - name: JVM_EXTRA_OPTS
+          value: "-Dkaraf.data=/nexus-data -Dnexus.datastore.enabled=true -Dnexus.datastore.configuration.type=h2"
         resources:
           requests:
             memory: "2Gi"
@@ -36,18 +44,26 @@ spec:
         volumeMounts:
         - name: nexus-data
           mountPath: /nexus-data
+      dnsPolicy: "None"
+      dnsConfig:
+        nameservers:
+          - 8.8.8.8
+          - 8.8.4.4
+        options:
+          - name: ndots
+            value: "5"
       volumes:
       - name: nexus-data
         persistentVolumeClaim:
           claimName: nexus-data
-      imagePullSecrets:
-        - name: my-docker-credentials
+#      imagePullSecrets:
+#        - name: my-docker-credentials
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: nexus-data
-  namespace: nexus
+  namespace: newnexus
 spec:
   accessModes:
   - ReadWriteOnce
@@ -55,4 +71,3 @@ spec:
     requests:
       storage: 10Gi
   storageClassName: local-storage
-

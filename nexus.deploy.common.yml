@@ -23,7 +23,7 @@ spec:
         fsGroup: 0
       containers:
       - name: nexus
-        image: docker.ellisbs.co.uk:5000/newnexus3:3.60.0
+        image: docker.ellisbs.co.uk:5190/newnexus3:3.60.0
         ports:
         - containerPort: 8081
         resources:
